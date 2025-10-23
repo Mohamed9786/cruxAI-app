@@ -1,7 +1,5 @@
 import React, { useState, useCallback } from 'react';
 
-// Removed all Gemini API dependencies (API_BASE_URL, apiKey, fetchWithRetry, fileToBase64)
-
 const LoaderIcon = () => (
     // Note: Loader icon color remains white as it sits on a black/dark gray button
     <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

@@ -1,6 +1,5 @@
 # Node / React
 node_modules/
-build/
 
 # Python / Flask
 __pycache__/
