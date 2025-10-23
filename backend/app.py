@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
 
 # Hugging Face Inference API token (set in Render Environment Variables)
-HF_API_TOKEN = os.environ.get("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")  # your Hugging Face API token
+HF_API_TOKEN = os.environ.get("")  # your Hugging Face API token
 HF_MODEL = "sshleifer/distilbart-cnn-12-6"  # summarization model
 
 # Helper function to summarize text using Hugging Face API
