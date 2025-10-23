@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+const BACKEND_URL = "https://cruxai-app.onrender.com";
 
 const LoaderIcon = () => (
     // Note: Loader icon color remains white as it sits on a black/dark gray button
@@ -53,9 +54,8 @@ export default function App() {
         setTextError('');
         
         try {
-            const apiUrl = "http://127.0.0.1:5000/summarize-text";
 
-            const response = await fetch(apiUrl, {
+            const response = await fetch(`${BACKEND_URL}/summarize-text`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ text }) // Send text as JSON payload
@@ -110,10 +110,9 @@ export default function App() {
             const formData = new FormData();
             formData.append("file", file); // 'file' must match the expected field name in your backend
             
-            const apiUrl = "http://127.0.0.1:5000/summarize-document";
             
             // fetch automatically sets the Content-Type header to multipart/form-data when passing a FormData body
-            const response = await fetch(apiUrl, {
+            const response = await fetch(`${BACKEND_URL}/summarize-document`, {
                 method: 'POST',
                 body: formData 
             });
